@@ -1,0 +1,102 @@
+#app-mount .layer-3QrUeG[aria-label*="SETTINGS"] .contentRegion-3nDuYy {
+  border-left: 1px solid var(--border-colour);
+  .contentColumnDefault-1VQkGM {
+    padding: var(--spacing-double);
+  }
+  // Close button
+  .toolsContainer-1edPuj {
+    padding-top: 0;
+    width: auto;
+    position: absolute;
+    right: 25px;
+    top: -48px;
+  }
+  .closeButton-1tv5uR {
+    border: none;
+    width: 36px;
+    height: 36px;
+    flex: none;
+    background: transparent;
+    border-radius: 0;
+  }
+  .keybind-KpFkfr {
+    display: none;
+  }
+  // Global rules
+  h2 {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xl);
+    color: var(--text-focus);
+    margin-bottom: var(--spacing-double);
+    line-height: unset;
+  }
+  h5 {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size);
+    line-height: unset;
+    &:not(.isEnabled-24g9qA) {
+      color: var(--text-default);
+    }
+  }
+  .row-2okwlC {
+    box-shadow: inset 0 -1px 0 var(--border-colour);
+  }
+  .titleDefault-a8-ZSr {
+    line-height: unset;
+  }
+  .description-3_Ncsb {
+    font-size: var(--font-size);
+    color: var(--text-default) !important;
+  }
+  .marginTop40-i-78cZ {
+    margin-top: var(--spacing-double);
+  }
+  .marginTop60-3PGbtK {
+    margin-top: var(--spacing-triple);
+  }
+  .h3-3PDeKG {
+    line-height: unset;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-half);
+  }
+  // Content dividers
+  .children-rWhLdy > .marginBottom40-2vIwTv {
+    margin-bottom: var(--spacing-double);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .horizontal-2EEEnY > .flexChild-faoVW3 {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+// Options
+.divider-3573oO {
+  border: none;
+  background-color: var(--border-colour);
+}
+.title-31JmR4 {
+  font-size: var(--font-size-lg);
+}
+
+@import 'usersettings';
+@import 'serversettings';
+
+// Light theme warning
+.theme-light #app-mount .layer-3QrUeG[aria-label*=SETTINGS] .standardSidebarView-3F1I7i:after {
+  content: "Light Theme BETA";
+  position: absolute;
+  font-size: 12px;
+  border-radius: var(--border-radius);
+  background: rgb(var(--discord-yellow));
+  padding: var(--spacing-third) var(--spacing-half);
+  color: var(--white);
+  top: 23px;
+  left: 84px;
+  transform: translateY(-25%);
+}

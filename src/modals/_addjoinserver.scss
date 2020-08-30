@@ -1,0 +1,50 @@
+#app-mount .root-1gCeng.wrapper-2ZbzR9 {
+  background: var(--addjoin-background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--addjoin-border-colour);
+  box-shadow: var(--elevation-1);
+  .header-3ZP1MY {
+    color: var(--addjoin-text);
+    font-weight: normal;
+  }
+  .action-1lSjCi {
+    background: var(--addjoin-background-dark);
+    border: 1px solid var(--addjoin-border-colour);
+    border-radius: var(--border-radius);
+  }
+  .colorStandard-2KCXvj,
+  .description-Bw8krY,
+  .description-QF3836 {
+    color: var(--addjoin-text);
+    font-weight: normal;
+  }
+  .modal-yWgWj- {
+    background: transparent;
+  }
+  .input-1mgnkM, .input-cIJ7To {
+    background: var(--addjoin-background-dark);
+    border-color: var(--addjoin-border-colour);
+    color: var(--addjoin-text);
+    &:focus {
+      border-color: rgb(var(--accent));
+    }
+  }
+  .footer-2gL1pp {
+    background: var(--addjoin-background);
+    border-top: 1px solid var(--addjoin-border-colour);
+  }
+}
+// Dark theme
+html.theme-dark #app-mount .wrapper-2ZbzR9.theme-light {
+  --addjoin-background: #24292e;
+  --addjoin-background-dark: #1d2125;
+  --addjoin-border-colour: #141414;
+  --addjoin-text: #fff;
+}
+// Light theme
+html.theme-light #app-mount .wrapper-2ZbzR9 {
+  --addjoin-background: #fff;
+  --addjoin-background-dark: #ebeef1;
+  --addjoin-border-colour: #e1e4e8;
+  --addjoin-text: #000;
+}

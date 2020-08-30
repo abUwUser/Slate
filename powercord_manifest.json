@@ -1,0 +1,9 @@
+{
+    "name": "Slate",
+    "description": "Github Desktop meets Discord. Supports both Light and Dark themes.",
+    "version": "1.0.0",
+    "author": "Gibbu#1211 & Tropical#8908",
+    "theme": "index.scss",
+    "consent": "false",
+    "license": "unknown"
+}
