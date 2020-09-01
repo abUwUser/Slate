@@ -148,8 +148,13 @@
       border-radius: var(--border-radius);
       transition: 100ms ease;
       .avatar-SmRMf2 {
-        border: 1px solid var(--border-colour);
         border-radius: var(--border-radius);
+        opacity:1 !important;
+        img {
+          clip-path:none;
+          border-radius:calc(var(--border-radius) / 2);
+          box-shadow:0 0 0 1px var(--border-colour);
+        }
         svg[x="14.5"][y="17"] {
           rect {
             x: 10;
@@ -186,9 +191,11 @@
           }
         }
         &:hover {
-          border-color: rgb(var(--accent));
           rect {
             stroke: rgb(var(--accent));
+          }
+          img {
+            box-shadow:0 0 0 1px rgb(var(--accent));
           }
         }
       }
