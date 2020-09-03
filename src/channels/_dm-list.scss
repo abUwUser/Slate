@@ -15,19 +15,32 @@
 		box-sizing: border-box;
 		padding: 0 var(--spacing);
 		button {
-			background: var(--topbar-header-selected);
+			box-sizing: border-box;
+			background-color: var(--topbar-background);
 			border: 1px solid var(--topbar-border);
-			height: auto;
 			border-radius: var(--border-radius);
-			font-size: var(--font-size);
-			cursor: text;
+			height: var(--input-height);
+			transform: translateZ(0);
+			font-size: 0;
+			box-shadow: none;
+			position:relative;
+			cursor:text;
+			width:100%;
+			font-weight:var(--font-weight-light);
+			color:var(--toolbar-text-muted);
+			padding:0 var(--spacing-half);
+			line-height:normal;
+			&:before {
+				content:'Where would you like to go?';
+				font-size:var(--font-size);
+			}
 		}
 	}
 	// Direct messages header
 	.privateChannelsHeaderContainer-3NB1K1 {
 		padding: var(--spacing);
 		height: auto;
-		color: var(--text-default);
+		color: var(--text-normal);
 		font-size: 12px;
 		text-transform: none;
 	}
@@ -50,7 +63,7 @@
 		.name-uJV0GL {
 			font-size: var(--font-size);
 			font-weight: var(--font-weight-light);
-			color: var(--text-default);
+			color: var(--text-normal);
 		}
 		.avatar-3uk_u9 {
 			margin-right: var(--spacing);
@@ -61,23 +74,39 @@
 			font-weight: var(--font-weight-bold);
 			color: var(--text-muted);
 		}
-		foreignObject[mask*="mobile"] {
-			width: calc(100% + var(--sidebar-width) - 14px);
-			&[width="32"] {
-				&:before {
-					width: 100px;
-					background: linear-gradient(90deg, transparent, var(--background) 40%);
-				}
-				&:after {
-					right: 30px;
-				}
+	  &[href="/store"] {
+		  display:none;
+	  }
+	  &[href="/library"] {
+		  border-left:1px solid var(--border-colour);
+	  }
+	  &[href="/channels/@me"],
+	  &[href="/library"] {
+		width:50%;
+		display:inline-block;
+		border-radius:0;
+		cursor:default;
+		.layout-2DM8Md {
+			justify-content:center;
+			height:28px;
+			border-bottom:1px solid var(--border-colour);
+			.avatar-3uk_u9 {
+				display:none;
+			}
+			.content-3QAtGj {
+				flex-grow:0;
+			}
+			&:active {
+				background:var(--background-modifier-hover);
 			}
 		}
-		&:hover foreignObject[mask*="mobile"]:before {
-	    background: linear-gradient(90deg, transparent, var(--background-modifier-hover) 40%);
-	  }
-	  &:active foreignObject[mask*="mobile"]:before {
-	    background: linear-gradient(90deg, transparent, var(--background-modifier-active) 40%);
+		&.selected-aXhQR6 .layout-2DM8Md {
+			background:transparent;
+			box-shadow:inset 0 -3px 0px var(--accent-solid);
+			.name-uJV0GL {
+				color:var(--text-normal) !important;
+			}
+		}
 	  }
 		&.selected-aXhQR6 {
 			color: var(--text-focus);
@@ -88,14 +117,6 @@
 			.name-uJV0GL,
 			.subtext-1RtU34 {
 				color: var(--text-focus) !important;
-			}
-			foreignObject[mask*="mobile"] {
-				&:before {
-					background: linear-gradient(90deg, transparent, var(--accent-solid) 50%);
-				}
-				&:after {
-					background: #fff;
-				}
 			}
 		}
 	}
